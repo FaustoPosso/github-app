@@ -1,0 +1,47 @@
+<ion-header class="container d-flex flex-column ion-no-border">
+  <div class="d-flex flex-column align-items-center">
+    <button class="btn btn-sm custom-button-commit animate__animated animate__fadeInDown" (click)="getAccountInfo()">
+      Show account info
+    </button>
+    <div *ngIf="showAccountInfo">
+      <div class="d-flex">
+        <div class="d-flex flex-column info">
+          <label class="form-label fw-bolder">Last update</label>
+          <p class="w-75">{{moment(accountInfo.updated_at).format('DD/MM/YYYY HH:mm')}}</p>
+        </div>
+        <div class="d-flex flex-column info">
+          <label class="form-label fw-bolder">Public repos</label>
+          <p>{{accountInfo.public_repos}}</p>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-sm btn custom-button-commit animate__animated animate__fadeInDown" (click)="getCommitsList()" *ngIf="showAccountInfo">
+      Show commits list
+    </button>
+    <i class="bi bi-arrow-clockwise animate__animated animate__fadeInDown" *ngIf="showPullToRefresh">Pull to refresh</i>
+  </div>
+</ion-header>
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" disabled={{pullToRefresh}}>
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      refreshingSpinner="circles">
+    </ion-refresher-content>
+  </ion-refresher>
+  <table class="table table-striped" *ngIf="showTable">
+    <thead>
+      <tr>
+        <th scope="col">Message</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let commit of commitsList;">
+        <td>{{commit.commit.message}}</td>
+        <td>{{commit.commit.author.name}}</td>
+        <td>{{moment(commit.commit.author.date).format('DD/MM/YYYY HH:mm')}}</td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>

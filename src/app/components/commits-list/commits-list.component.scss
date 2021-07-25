@@ -1,0 +1,41 @@
+button {
+    margin: 4% 30% 0 30%;
+}
+
+.btn:hover {
+    color:white;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+.custom-button-commit {
+    background: var(--ion-color-primary);
+    color:white;
+    font-weight:bolder;
+}
+
+ion-refresher {
+    position:absolute;
+    z-index:99;
+    display:none;
+}
+
+i {
+    font-size: 13px;
+    margin-top: 10px;
+    color: var(--ion-color-primary);
+    margin-bottom:5px;
+}
+
+table {
+    margin-bottom: 20% !important;
+}
+
+.info {
+  margin: 25px 20px;
+}
+
