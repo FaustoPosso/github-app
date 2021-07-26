@@ -39,3 +39,7 @@
     font-weight:bolder;
     letter-spacing: 2px;
 }
+
+ion-content {
+    --background: var(--ion-background-color, transparent);
+    }

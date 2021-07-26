@@ -14,6 +14,7 @@ export class CommitsListComponent implements OnInit {
   accountInfo: Array<any> = [];
   showTable: boolean = false;
   showAccountInfo: boolean = false;
+  showAccountInfoButton: boolean = false;
   showPullToRefresh: boolean = false;
   showInfo: boolean = false;
   pullToRefresh: boolean = true;
@@ -40,8 +41,8 @@ export class CommitsListComponent implements OnInit {
   }
 
   getCommitsList() {
+    this.showAccountInfoButton = true;
     this.pullToRefresh = false;
-
     this.githubService.getCommitsList().subscribe(
       (data:any) => {
         this.showTable = true;

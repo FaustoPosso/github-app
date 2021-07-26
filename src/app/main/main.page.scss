@@ -12,14 +12,9 @@ label {
     font-weight:bolder;
 }
 
-ion-footer {
-    margin-top:5%;
-}
-
 i {
     color:white;
 }
-
 
 img {
     width: 100px;
@@ -33,6 +28,16 @@ hr {
   width: 13%;
   opacity: 1;
   margin: 0;
+}
+
+p {
+    color: gray;
+    font-size:12px;
+    font-style: italic;
+}
+
+input {
+    height:28px;
 }
 
 
