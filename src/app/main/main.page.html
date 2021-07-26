@@ -1,7 +1,25 @@
 
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Main menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="['/home']"><i class="bi bi-person-circle"></i>Account info</ion-item>
+      <ion-item [routerLink]="['/data']"><i class="bi bi-card-heading"></i>Data manager</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
 <ion-header class="ion-no-border">
   <ion-toolbar color="secondary">
-    <ion-title class="display-6 text-center animate__animated animate__fadeInDown">Github Account Info</ion-title>
+    <ion-menu-toggle>
+      <ion-item lines="none"><i class="bi bi-list fs-3"></i> 
+      <ion-title class="display-6 text-center animate__animated animate__fadeInDown">Github Account Info</ion-title>
+    </ion-item>
+      </ion-menu-toggle>
   </ion-toolbar>
   <div class="m-3">
     <div class="d-flex flex-column align-items-center">

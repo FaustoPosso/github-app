@@ -15,6 +15,7 @@ label {
 
 i {
     color:white;
+    margin-right: 5px;;
 }
 
 img {
@@ -39,6 +40,14 @@ p {
 
 input {
     height:28px;
+}
+
+.bi-list {
+    color: #ff6b00;
+}
+
+ion-item {
+    --background: var(--ion-color-secondary);
 }
 
 

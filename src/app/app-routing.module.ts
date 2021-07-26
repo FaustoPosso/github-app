@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'main',
     loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
   },
+  {
+    path: 'data',
+    loadChildren: () => import('./data-manager/data-manager.module').then( m => m.DataManagerPageModule)
+  },
 ];
 
 @NgModule({
