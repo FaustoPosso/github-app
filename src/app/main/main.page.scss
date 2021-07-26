@@ -40,6 +40,7 @@ input {
 
 ion-item {
     --background: var(--ion-color-secondary);
+    color:white;
 }
 
 .bi-list::before {
@@ -51,6 +52,10 @@ ion-item {
     position:absolute; 
     z-index:2;
     top:1vh;
+}
+
+ion-title {
+    color: white;
 }
   
 

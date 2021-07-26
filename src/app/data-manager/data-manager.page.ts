@@ -75,6 +75,10 @@ export class DataManagerPage {
   }
 
   addOrEdit() {
+    if(this.selectedCommit.msg === undefined) {
+      this.presentAlert();
+      return;
+    }
     if(this.selectedCommit.id === 0) {
       this.selectedCommit.id = this.commitArray.length + 1;
       this.commitArray.push(this.selectedCommit);
@@ -84,5 +88,15 @@ export class DataManagerPage {
 
   openForEdit(commit) {
     this.selectedCommit = commit;
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Dear user',
+      message: `<strong>Please insert a commit message</strong>`,
+      buttons: ['OK']
+    });
+    await alert.present();
   }
 }
