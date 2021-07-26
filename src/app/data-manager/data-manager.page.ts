@@ -13,17 +13,17 @@ export class DataManagerPage {
   commitArray: Commit[] = [
     {id: 1,
     msg: 'Added imgs captures for README.md'},
-    {id: 1,
-    msg: 'Added README.md'},
     {id: 2,
-    msg: 'Commit model creation, added menu, fix dataManager page'},
+    msg: 'Added README.md'},
     {id: 3,
-    msg: 'added routes and data-manager page'},
+    msg: 'Commit model creation, added menu, fix dataManager page'},
     {id: 4,
-    msg: 'Content scroll fixed'},
+    msg: 'added routes and data-manager page'},
     {id: 5,
-    msg: 'fix layout and look and feel'},
+    msg: 'Content scroll fixed'},
     {id: 6,
+    msg: 'fix layout and look and feel'},
+    {id: 7,
     msg: 'initial commit, ionic installation, components creation and look and feel design'}
   ]; 
 
