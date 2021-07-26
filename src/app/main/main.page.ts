@@ -18,34 +18,39 @@ export class MainPage implements OnInit {
 
   constructor(
     private githubService: GithubService, 
-    public alertController: AlertController,
+    public  alertController: AlertController,
     private menu: MenuController) { }
 
 
 
   ngOnInit() {
-    // this.user = environment.user;
-    // this.repo = environment.repo;
-    // this.githubService.getAccountInfo().subscribe(
-    //   (data:any) => {
-    //     this.accountInfo = data;
-    //     console.log(this.accountInfo)
-    //     return this.accountInfo;
-    //   },
-    //   (err) => {
-    //   this.catchError = err.error.message;
-    //   this.presentAlert();
-    //   })
+    this.user = environment.user;
+    this.repo = environment.repo;
+    this.githubService.getAccountInfo().subscribe(
+      (data:any) => {
+        this.accountInfo = data;
+        console.log(this.accountInfo)
+        return this.accountInfo;
+      },
+      (err) => {
+      this.catchError = err.error.message;
+      this.presentAlert();
+      })
+  }
+
+  actionMenu() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
   }
 
   openEnd() {  
     this.menu.close();
     }
 
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }
+  // openFirst() {
+  //   this.menu.enable(true, 'first');
+  //   this.menu.open('first');
+  // }
 
   async presentAlert() {
     const alert = await this.alertController.create({

@@ -1,2 +1,63 @@
-data manager
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Main menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item [routerLink]="['/main']"><i class="bi bi-person-circle"></i>Account info</ion-item>
+        <ion-item [routerLink]="['/data']"><i class="bi bi-card-heading"></i>Data manager</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+   <ion-header class="ion-no-border">
+    <ion-toolbar color="secondary">
+        <ion-menu-toggle>
+          <ion-item lines="none"><i class="bi bi-list fs-3"></i> 
+            <ion-title class="display-6 text-center animate__animated animate__fadeInDown">Data manager</ion-title>
+          </ion-item>
+        </ion-menu-toggle>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div class="d-flex justify-content-center">
+      <h3>Commits list</h3>
+    </div>
+    <ion-list>
+      <ion-item-sliding id="itemCommit" *ngFor="let commit of commitArray;">
+        <ion-item href="#" lines="none" class="ion-item">
+          <ion-label>
+            <h4>{{commit.msg}}</h4>
+          </ion-label>
+        </ion-item>
+       <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="delete(commit)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+          <ion-item-option (click)="openForEdit(commit)">
+            <ion-icon slot="icon-only" name="create"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+    <div class="card m-4">
+      <div class="card-body">
+        <div class="card-title">
+          <p>Insert new commit</p>
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Insert commit msg.." class="form-control" [(ngModel)]="selectedCommit.msg">
+        </div>
+        <button class="btn btn-sm btn custom-button animate__animated animate__fadeInLeft mt-4" (click)=addOrEdit()>
+          Submit
+        </button>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer>
+    <i class="bi bi-github d-flex m-2 justify-content-center animate__animated animate__zoomIn"></i>
+  </ion-footer>
+  
 

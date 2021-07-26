@@ -1,0 +1,44 @@
+
+ion-item {
+    --background: var(--ion-color-secondary);
+}
+
+.ion-item {
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.bi-list {
+    color: #ff6b00;
+    position:absolute; 
+    z-index:2;
+    top:1vh;
+}
+
+i {
+    margin-right: 5px;
+}
+
+h3 {
+    color:black;
+}
+
+.bi-list::before {
+    font-weight:bolder !important;
+}
+
+#itemCommit ion-item {
+  --background: #e4e4e4;
+  color: black;
+}
+
+ion-list {
+    background: white;
+}
+
+ion-item-options {
+    border: 1px solid #f1f1f1;
+}
+
+p {
+    color:black;
+}

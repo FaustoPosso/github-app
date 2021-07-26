@@ -44,4 +44,22 @@ ion-content {
   --background: var(--ion-background-color, transparent);
 }
 
+ion-footer {
+  background-color: var(--ion-color-secondary)
+}
 
+i {
+  color:white;
+}
+
+.alert-wrapper.sc-ion-alert-ios {
+  background: white !important;
+}
+
+.alert-title.sc-ion-alert-ios {
+  color:black;
+}
+
+.alert-message.sc-ion-alert-ios, .alert-input-group.sc-ion-alert-ios {
+  color:gray;
+}
