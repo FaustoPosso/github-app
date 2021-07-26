@@ -16,6 +16,7 @@ export class CommitsListComponent implements OnInit {
   showAccountInfo: boolean = false;
   showAccountInfoButton: boolean = false;
   showPullToRefresh: boolean = false;
+  showSpaceDefault: boolean = true;
   showInfo: boolean = false;
   pullToRefresh: boolean = true;
   catchError: string;
@@ -28,6 +29,7 @@ export class CommitsListComponent implements OnInit {
 
   getAccountInfo() {
     this.showAccountInfo = true;
+    this.showSpaceDefault = false;
     this.githubService.getAccountInfo().subscribe(
     (data:any) => {
       this.accountInfo = data;

@@ -6,12 +6,6 @@ button {
     color:white;
 }
 
-thead {
-    position: sticky;
-    top: 0;
-    background: white;
-}
-
 .custom-button-commit {
     background: var(--ion-color-primary);
     color:white;
@@ -32,7 +26,9 @@ i {
 }
 
 table {
-    margin-bottom: 10%;
+    margin-bottom: 8%;
+    position: sticky;
+    overflow: hidden;
 }
 
 .info {
@@ -45,6 +41,10 @@ table {
 
 p, label {
     color: black;
+}
+
+.space-default {
+    margin-bottom:5vh;
 }
 
 

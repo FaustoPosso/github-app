@@ -10,6 +10,7 @@ ion-footer {
 
 label {
     font-weight:bolder;
+    font-size:14px;
 }
 
 i {
@@ -23,7 +24,7 @@ img {
 
 hr {
   background: var(--ion-color-primary);
-  border: .1px solid var(--ion-color-primary);
+  border: 0 solid var(--ion-color-primary);
   border-radius: 10px;
   width: 13%;
   opacity: 1;
