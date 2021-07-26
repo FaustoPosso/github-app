@@ -12,6 +12,8 @@ export class DataManagerPage {
   catchError: string;
   commitArray: Commit[] = [
     {id: 1,
+    msg: 'Added imgs captures for README.md'},
+    {id: 1,
     msg: 'Added README.md'},
     {id: 2,
     msg: 'Commit model creation, added menu, fix dataManager page'},

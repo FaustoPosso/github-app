@@ -8,10 +8,10 @@ this application shows information about a Github account.
 
 # Demo 
 
-<img width="200px" height="400px" src="src/assets/imgs/capt1.png">
-<img width="200px" height="400px" src="src/assets/imgs/capt2.png">
-<img width="200px" height="400px" src="src/assets/imgs/capt3.png">
-<img width="200px" height="400px" src="src/assets/imgs/capt4.png">
+<img width="200px" height="400px" src="src/assets/imgs/capt1.jpg">
+<img width="200px" height="400px" src="src/assets/imgs/capt2.jpg">
+<img width="200px" height="400px" src="src/assets/imgs/capt3.jpg">
+<img width="200px" height="400px" src="src/assets/imgs/capt4.jpg">
 
 &nbsp;
 
